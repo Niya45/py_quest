@@ -16,7 +16,7 @@ capitals = {
 # print all key and value:
 # print(countries)
 
-# print pairs with key:
+# print values from keys:
 print(capitals["Japan"])
 print(capitals.get("Russia"))
 
@@ -49,6 +49,8 @@ print(values)
 
 # get the 
 # print KEY: VALUE pair (in different lines): 
-    # .items() : return a key and value in each iteration
+    # .items() : return a key and it's value in each iteration
+    # dictionary is unordered
+
 for key,value in capitals.items():
     print(f"{key}:{value}")

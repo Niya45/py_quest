@@ -51,14 +51,16 @@ def shipping_usr(*args, **kwargs):
     for arg in args: 
         print(arg, end=" ")
     print()
-    for key, value in kwargs.items():
-        print(f"{key} : {value}")
-    print()
-    #if the person has a key called country, they will print the adress:
-    if "country" in kwargs:
-        print(f"{kwargs.get('country')}, {kwargs.get('state')}, {kwargs.get('city')}")
+        #if the person has a key called country, they will print the adress:
+    if "state" in kwargs:
+        print(f"{kwargs.get('country')}, {kwargs.get('state')}, {kwargs.get('city')} \non street : {kwargs.get('street')}")
+    elif "prefecture" in kwargs:
+        print(f"{kwargs.get('country')}, {kwargs.get('prefecture')}, {kwargs.get('city')} \non street : {kwargs.get('street')}")
     else:
-        print("no address specified (POTENTIAL SCAMMER)")
+        print("Given adress:")
+        print("-----------")
+        for key, value in kwargs.items():
+            print(f"{key} : {value}") 
 
 shipping_usr("Mr.", "Tony", "Abraham",
             country="japan",
