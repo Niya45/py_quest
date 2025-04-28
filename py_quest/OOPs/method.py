@@ -26,7 +26,7 @@ print(car_1.start_engine()) # call method using object, which passes in object a
 
 ## Method changing attribute values:
 print(car_1.price)
-car_1.new_price(2)
+car_1.new_price(1.20)
 print(car_1.price)
 
 ## ~~~~~~~~~~~~~~~~~~Instance Methods~~~~~~~~~~~~~~~~~~
@@ -45,13 +45,68 @@ print(car_1.price)
 
 # Purpose: Operates on class level data(same across all instances). Create or modify class-wide state, or act as alternative constructors
 
+## ~~~~~~~~~~~~~~~~~~Static Methods~~~~~~~~~~~~~~~~~~
+
+# made with decorators: @staticmethods
+# no specific parameters
+# Don't access instances or class
 
 ## ~~~~~~~~~~~~~~~~~~USE CASE~~~~~~~~~~~~~~~~~~
 class Organism:
-    def __init__(self, genus, species, relevance):
+    planet = "earth"
+    def __init__(self, name, genus, species, brainpower):
+        self.name = name
         self.genus = genus,
         self.species = species,
-        self.relevance = relevance
-    # Instance methods
+        self.brainpower = brainpower
+    #~ Instance methods
     def org_name(self):
         return f"{self.genus} {self.species}"
+    def profile(self):
+       return f"# {self.name}: \n|-Genus: {self.genus} \n|-Species: {self.species} \n|-brainpower: {self.brainpower} \n|_Planet: {self.planet}"
+    #~ Class methods
+    @classmethod
+    def change_planent(cls, np):
+        cls.planet = np
+    @classmethod
+    def break_down(cls, string):
+        name, genus, species, brainpower = string.split("-")
+        # create a new object & return. The var calling this will be object
+        return cls(name, genus, species, int(brainpower))
+    #~ Static methods
+    @staticmethod
+    def brainpower_evaluate(bp):
+        if bp <= 30:
+            return "Inferior"
+        if bp > 30 and bp <= 60:
+            return "Stupid"
+        if bp > 60 and bp <= 100:
+            return "Plain"
+        if bp > 100 and bp <= 500:
+            return "Smart"
+        if bp > 500 and bp <= 1000:
+            return "Clever"
+        if bp > 1000 and bp <= 1500:
+            return "Genius"
+        else:
+            "GOD"
+humans = Organism("Human", "Homo", "sapiens", 2000)
+cat = Organism("Cat", "Felis", "catus", 100000)
+
+# Using instance method:
+print(humans.profile())
+print(cat.profile())
+print(Organism.profile(cat))
+
+# Using class_method:
+Organism.change_planent("mars") # call using class (attribute changes for every instance)
+humans.change_planent("saturn") # call using object (attribute changes for every instance)
+print(humans.profile()) # the class attribute's value is different now
+
+# Using class methods as alternative constructors
+fox_info = "Fox-Vulpes-vulpes-8000"
+fox = Organism.break_down(fox_info)
+print(fox.profile())
+
+# Using Static methods:
+print(Organism.brainpower_evaluate(1000))
