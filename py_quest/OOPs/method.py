@@ -17,7 +17,8 @@ class Car:
 car_1 = Car("supra", 2022, 20000)
 car_2 = Car("ferrari", 2001, 100000)
 
-## ~~~~~~~~~~~~~~~~~~Call a method:~~~~~~~~~~~~~~~~~~
+# CALL A METHOD:
+# -------------------------------------
 
 print(Car.start_engine(car_1)) # call method with class by passing the object
     # when we pass in the object, it is recieved as 'self' 
@@ -29,7 +30,8 @@ print(car_1.price)
 car_1.new_price(1.20)
 print(car_1.price)
 
-## ~~~~~~~~~~~~~~~~~~Instance Methods~~~~~~~~~~~~~~~~~~
+# INSTANCE METHODS
+# --------------------------------------------
 
 # made without decorators
 # first parameter : self (instance calling)
@@ -37,7 +39,8 @@ print(car_1.price)
 
 # Purpose: Operates on instance's data. Modify, access or use attributes of the instance. 
 
-## ~~~~~~~~~~~~~~~~~~Class Methods~~~~~~~~~~~~~~~~~~ ??
+# CLASS METHODS 
+# --------------------------------------------
 
 # made with decorators: @classmethods
 # first parameter : cls (class itself)
@@ -45,13 +48,16 @@ print(car_1.price)
 
 # Purpose: Operates on class level data(same across all instances). Create or modify class-wide state, or act as alternative constructors
 
-## ~~~~~~~~~~~~~~~~~~Static Methods~~~~~~~~~~~~~~~~~~
+# STATIC METHODS
+# --------------------------------------------
 
 # made with decorators: @staticmethods
 # no specific parameters
 # Don't access instances or class
 
-## ~~~~~~~~~~~~~~~~~~USE CASE~~~~~~~~~~~~~~~~~~
+# USE CASE
+# --------------------------------------------
+
 class Organism:
     planet = "earth"
     def __init__(self, name, genus, species, brainpower):
@@ -59,12 +65,12 @@ class Organism:
         self.genus = genus,
         self.species = species,
         self.brainpower = brainpower
-    #~ Instance methods
+    #~ **Instance methods**
     def org_name(self):
         return f"{self.genus} {self.species}"
     def profile(self):
        return f"# {self.name}: \n|-Genus: {self.genus} \n|-Species: {self.species} \n|-brainpower: {self.brainpower} \n|_Planet: {self.planet}"
-    #~ Class methods
+    #~ **Class methods**
     @classmethod
     def change_planent(cls, np):
         cls.planet = np
@@ -73,7 +79,7 @@ class Organism:
         name, genus, species, brainpower = string.split("-")
         # create a new object & return. The var calling this will be object
         return cls(name, genus, species, int(brainpower))
-    #~ Static methods
+    #~ **Static methods**
     @staticmethod
     def brainpower_evaluate(bp):
         if bp <= 30:
@@ -109,4 +115,4 @@ fox = Organism.break_down(fox_info)
 print(fox.profile())
 
 # Using Static methods:
-print(Organism.brainpower_evaluate(1000))
+print(Organism.brainpower_evaluate(1000))  
