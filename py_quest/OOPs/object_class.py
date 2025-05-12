@@ -12,11 +12,12 @@ class Car:
         self.model = f"{name}, {year}"
 
 
-## ~~~~~~~~~~~~~~~~~~Creating Instances:~~~~~~~~~~~~~~~~~~
+# CREATING INSTANCES:
+# --------------------------------------------------------------------------
+
 car_1 = Car("supra", 2022, 20000)
 car_2 = Car("ferrari", 2001, 100000)
 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ## SELF : refers to the object that is calling the method or attribute
 
@@ -31,3 +32,18 @@ car_2 = Car("ferrari", 2001, 100000)
 
 # __init__ gets called when an instance is created
 # inside init method, instance attributes are initialized
+
+# IS INSTANCE:
+# --------------------------------------------------------------------------
+
+# isinstance(object, class) : built-in, checks if the object is of a certain class
+
+print(isinstance(car_1, Car)) # boolean : true
+print(isinstance(car_2, Car)) # boolean : true
+
+# IS SUBCLASS:
+# --------------------------------------------------------------------------
+ 
+ # issubclass(subclass, parentclass) : built-in, checks if the class is inherited from the given parent class
+
+print(issubclass(Car, super)) # Car isn't the subclass of "super"
