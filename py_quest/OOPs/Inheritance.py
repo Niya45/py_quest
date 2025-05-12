@@ -44,11 +44,35 @@ print(f"Planet: {tiger.planet}")
 
 class Human(Animal):
     planet = "Mars"
+    # INITIALIZING in inherited methods:
+    def __init__(self, name, genus, species, bp, job, friends=None):
+        super().__init__(name, genus, species, bp) # calls the parent's __init__ methods and passes in the required arguments.
+        self.job = job
+        if friends == None:
+            self.friends = []
+        else:
+            self.friends = friends
 
-john = Human("John cena", "Homo", "sapiens", 1500)
+    def add_friend(self, new_f):
+        if new_f not in self.friends:
+            self.friends.append(new_f)
+    
+    def remove_friend(self, old_f):
+        if old_f not in self.friends:
+            self.friends.remove(old_f)
+    
+    def print_frnd(self):
+        for friend in self.friends:
+            print(f"Friend {self.friends.index(friend)+1} is {friend}")
+
+
+john = Human("John", "Homo", "sapiens", 1500, "doctor", ["james", "anne", "clair", "layman"])
 
 print(john.brainpower_evaluate())
-print(f"Planet: {john.planet}")
+print(f"Humans Planet: {john.planet}")
+print(f"{john.name}'s job : {john.job}")
+john.remove_friend("clair")
+john.print_frnd()
 
 
 # TYPES OF INHERITANCE:
@@ -77,3 +101,4 @@ print(f"Planet: {john.planet}")
 ## Hybrid Inheritance: mix of inheritance (multiple + hierarchical)
 # class Grandchild(Child, Parent)
 #   pass
+
