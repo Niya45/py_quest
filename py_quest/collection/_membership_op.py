@@ -22,7 +22,7 @@ if value1 in name:
 elif value2 in name:
     print( f"{value2} is not the name {name}, but 'c' is !")
 else:
-    print(f"this is very inefficient, no the name {name} don't have {value1} or {value2} in it")
+    print(f"this is very inefficient. No, the name {name} don't have {value1} or {value2} in it")
 
 # second example:
 email = "catfish@yahoocom"
