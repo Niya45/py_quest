@@ -26,3 +26,8 @@ Employee.employer = "Disney" # changes for every instance
 print(Employee.employer)
 worker1.employer = "AWS Japan" # only changes for this instance
 print(worker1.employer)
+
+# PRIVATE ATTRIBUTE
+# --------------------------------------------
+# PUBLIC ATTRIBUTE
+# --------------------------------------------

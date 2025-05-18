@@ -47,3 +47,4 @@ print(isinstance(car_2, Car)) # boolean : true
  # issubclass(subclass, parentclass) : built-in, checks if the class is inherited from the given parent class
 
 print(issubclass(Car, super)) # Car isn't the subclass of "super"
+

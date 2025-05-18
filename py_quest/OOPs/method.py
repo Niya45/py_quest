@@ -62,8 +62,8 @@ class Organism:
     planet = "earth"
     def __init__(self, name, genus, species, brainpower):
         self.name = name
-        self.genus = genus,
-        self.species = species,
+        self.genus = genus
+        self.species = species
         self.brainpower = brainpower
     #~ **Instance methods**
     def org_name(self):
@@ -116,3 +116,9 @@ print(fox.profile())
 
 # Using Static methods:
 print(Organism.brainpower_evaluate(1000))  
+
+
+# PUBLIC METHODS
+# --------------------------------------------
+# PRIVATE METHODS
+# --------------------------------------------
