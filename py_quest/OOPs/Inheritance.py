@@ -1,8 +1,10 @@
 #  INHERITANCE: 
 # --------------------------------------------------------------------------
 
-# Definition: Mechanism where a child class (subclass) inherits attributes and methods from a parent class (superclass)
-# Merits: Promotes reusablity by creating connection between classes
+"""
+- Definition: Mechanism where a child class (subclass) inherits attributes and methods from a parent class (superclass)
+- Merits: Promotes reusablity by creating connection between classes
+"""
 
 class Animal:
     planet = "Earth"
@@ -36,11 +38,12 @@ print(f"Planet: {tiger.planet}")
 # SUBCLASS:
 # --------------------------------------------------------------------------
 
-# Instance of subclass: have the attributes of parent + it's own
+""" 
+Instance of subclass: have the attributes of parent + it's own
 
-# Method Resolution Order: the order in which python searches for methods:
-    # class-parentclass-grandparentclass-greadgrandparentclass---
-
+- Method Resolution Order: the order in which python searches for methods:
+    - class-parentclass-grandparentclass-greadgrandparentclass---
+"""
 
 class Human(Animal):
     planet = "Mars"
@@ -66,7 +69,7 @@ class Human(Animal):
             print(f"Friend {self.friends.index(friend)+1} is {friend}")
 
 
-john = Human("John", "Homo", "sapiens", 1500, "doctor", ["james", "anne", "clair", "layman"])
+john = Human("John", "Homo", "sapien", 1500, "doctor", ["james", "anne", "clair", "layman"])
 
 print(john.brainpower_evaluate())
 print(f"Humans Planet: {john.planet}")
@@ -75,30 +78,30 @@ john.remove_friend("clair")
 john.print_frnd()
 
 
-# TYPES OF INHERITANCE:
-# --------------------------------------------------------------------------
+""" TYPES OF INHERITANCE:
+--------------------------------------------------------------------------
 
-## Single inheritance: inherit one parent
-# class Child(parent):
-#     pass
+# Single inheritance: inherit one parent
+class Child(parent):
+    pass
 
-## Multiple inheritance: inerit multiple parent
-# class Child(parent1, parent2):
-#     pass
+# Multiple inheritance: inerit multiple parent
+class Child(parent1, parent2):
+    pass
 
-## Multilevel Inheritance: multiple subclasses inherit from one parent
-# class Child1(parent):
-#     pass
-# class Child2(parent):
-#     pass
-# class Child3(parent):
-#     pass
+# Multilevel Inheritance: multiple subclasses inherit from one parent
+class Child1(parent):
+    pass
+class Child2(parent):
+    pass
+class Child3(parent):
+    pass
 
-## Hierarchical inheritance: inherit a parent inheriting a grandparent
-# class Grandchild(Child):
-#     pass
+# Hierarchical inheritance: inherit a parent inheriting a grandparent
+class Grandchild(Child):
+    pass
 
-## Hybrid Inheritance: mix of inheritance (multiple + hierarchical)
-# class Grandchild(Child, Parent)
-#   pass
-
+# Hybrid Inheritance: mix of inheritance (multiple + hierarchical)
+class Grandchild(Child, Parent)
+  pass
+ """

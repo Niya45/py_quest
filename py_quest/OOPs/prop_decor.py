@@ -3,8 +3,10 @@
 # GETTERS: @property
 # ------------------------
 
-"""Access instance data and operate on them"""
-"""Dispite being a method, can also be called as if it's an attribute."""
+"""
+Access instance data and operate on them
+Dispite being a method, can also be called as if it's an attribute.
+"""
 # EG: obj.getter_name
 
 # SETTERS: @x.setter

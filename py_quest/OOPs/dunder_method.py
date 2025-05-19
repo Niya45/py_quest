@@ -2,20 +2,22 @@
 
 ## built in dunder methods:
 
-# INIT METHOD: __init__()
-# Initializer for the attributes
-# -----------------------------------------------------
+"""
+INIT METHOD: __init__()
+- Initializer for the attributes
+"""
 
-# REPRESENTING METHOD: __repr__()
-#   define the official string representation of an object. For Devs
-#   When using "print()" : python fall back and use this if __str__ is not defined
-# -----------------------------------------------------
+"""
+REPRESENTING METHOD: __repr__()
+- define the official string representation of an object. For Devs
+-  When using "print()" : python fall back and use this if __str__ is not defined
+"""
 
-# STR METHOD: __str__()
-# define the official string representation of an object. For users
-# When using "print()" : python calls this method
-# -----------------------------------------------------
-
+""" 
+STR METHOD: __str__()
+- define the official string representation of an object. For users
+- When using "print()" : python calls this method
+"""
 
 class Book:
     def __init__(self, name, author, genre, pagecount, status=False):

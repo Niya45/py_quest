@@ -30,30 +30,32 @@ print(car_1.price)
 car_1.new_price(1.20)
 print(car_1.price)
 
-# INSTANCE METHODS
-# --------------------------------------------
+"""
+INSTANCE METHODS
+--------------------------------------------
 
-# made without decorators
-# first parameter : self (instance calling)
-# extra arguments should be passed when calling
+made without decorators
+first parameter : self (instance calling)
+extra arguments should be passed when calling
 
-# Purpose: Operates on instance's data. Modify, access or use attributes of the instance. 
+Purpose: Operates on instance's data. Modify, access or use attributes of the instance. 
 
-# CLASS METHODS 
-# --------------------------------------------
+CLASS METHODS 
+--------------------------------------------
 
-# made with decorators: @classmethods
-# first parameter : cls (class itself)
-# extra arguments should be passed when calling
+made with decorators: @classmethods
+first parameter : cls (class itself)
+extra arguments should be passed when calling
 
-# Purpose: Operates on class level data(same across all instances). Create or modify class-wide state, or act as alternative constructors
+Purpose: Operates on class level data(same across all instances). Create or modify class-wide state, or act as alternative constructors
 
-# STATIC METHODS
-# --------------------------------------------
+STATIC METHODS
+--------------------------------------------
 
-# made with decorators: @staticmethods
-# no specific parameters
-# Don't access instances or class
+made with decorators: @staticmethods
+no specific parameters
+Don't access instances or class 
+"""
 
 # USE CASE
 # --------------------------------------------
@@ -117,8 +119,3 @@ print(fox.profile())
 # Using Static methods:
 print(Organism.brainpower_evaluate(1000))  
 
-
-# PUBLIC METHODS
-# --------------------------------------------
-# PRIVATE METHODS
-# --------------------------------------------

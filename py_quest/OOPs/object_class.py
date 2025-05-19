@@ -18,25 +18,28 @@ class Car:
 car_1 = Car("supra", 2022, 20000)
 car_2 = Car("ferrari", 2001, 100000)
 
+""" 
+SELF : refers to the object that is calling the method or attribute
 
-## SELF : refers to the object that is calling the method or attribute
-
-# self.attribute = attribute
-    # attribute : the attribute passed to __init__
-    # self.attribute : object.attribute
-    # EG: car_1.attribute = 'supra'
-    # initializing, assigning the values to object
+self.attribute = attribute
+    attribute : the attribute passed to __init__
+    self.attribute : object.attribute
+    EG: car_1.attribute = 'supra'
+    initializing, assigning the values to object
 
 
-## INITIALIZER : __init__(self, attibute1, attribute2)
+- INITIALIZER : __init__(self, attibute1, attribute2)
 
-# __init__ gets called when an instance is created
-# inside init method, instance attributes are initialized
+__init__ gets called when an instance is created
+inside init method, instance attributes are initialized
+"""
+
 
 # IS INSTANCE:
-# --------------------------------------------------------------------------
+# -------------------------------------------------------------------------- 
 
-# isinstance(object, class) : built-in, checks if the object is of a certain class
+# - isinstance(object, class) : built-in, checks if the object is of a certain class
+
 
 print(isinstance(car_1, Car)) # boolean : true
 print(isinstance(car_2, Car)) # boolean : true
