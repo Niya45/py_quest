@@ -33,7 +33,7 @@ acc1 = BankAccount("Niya", 1, "saving", 100000, -1000)
 - naming : __varName
 - Only accessible within the class. 
 - Can be accessed from methods inside the class
-- _class__attribute : private methods are stored like this
+- _class__attribute : private methods are name mangled
 - Isn't inherited, can't get or set. (but child's instances do have those attributes)
 - No direct access
 '''
@@ -55,7 +55,7 @@ except:
 
 # PROTECTED ATTRIBUTE:
 # ------------------------------
-""" 
+""" a convention than a rule
 - naming : _varName
 - Only accessible within the class and chlid class
 - Can be accessed from methods inside the class
