@@ -21,7 +21,7 @@ Dispite being a method, can also be called as if it's an attribute.
 
 """Methods that delete an instances data"""
 # EG: del obj.getter_name
-class Person:
+class Person: 
     def __init__(self, firstname, lastname, age, job):
         self.firstname = firstname
         self.lastname = lastname
