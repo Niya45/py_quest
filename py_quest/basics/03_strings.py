@@ -1,5 +1,6 @@
 
-#_____STRINGS_____
+# STRINGS
+# ----------------------------
 
 # print(help(str))
 
@@ -9,7 +10,8 @@ stri2 = '23'           # String with single quotes
 stri3 = "True"         # String can contain any characters
 stri4 = 'niya\'s'      # Using escape character for apostrophe
 
-# __f-string__
+# f-string
+# ----------------------------
 
 name = "niya"
 age = 14
@@ -25,10 +27,13 @@ print(f"Are you smart: {is_smart}")
 # Multiple variables in one f-string
 print(f"Hello, {name}, {stri1}")
 
-# _______STRING METHODS________
+# STRING METHODS 
+# ----------------------------
+
 var_min = "I hate the number Four"
 
-## ~~~Length and Case Manipulation~~~
+# Length and Case Manipulation
+# ----------
 
 # Length of string
 print(len(var_min))  # Get string length
@@ -40,9 +45,9 @@ print(var_min.capitalize())   # Capitalize first letter
 print(var_min.title())        # Capitalize first letter of each word
 
 
-## ~~~String Checking Methods~~~
+# String Checking Methods
+# ----------
 
-# Checking string characteristics
 print(var_min.islower())      # Check if all characters are lowercase
 print(var_min.isupper())      # Check if all characters are uppercase
 
@@ -55,13 +60,15 @@ print(pi.isdigit())           # Check if string contains only digits
 print(var_min.isalpha())      # Check if string contains only alphabetic characters
 print(var_min.count(" "))     # Count occurrences of a substring
 
-## ~~~ Indexing and Accessing Characters ~~~
+# Indexing and Accessing Characters
+# ----------
 
 # Accessing individual characters
 print(var_min[0])             # First character
 print(var_min.index("F"))     # Index of first occurrence of "F"
 
-## ~~~ String Modification ~~~
+# String Modification
+# ----------
 
 # Replacing parts of a string
 phrase = "Capibara Academy"
@@ -71,7 +78,8 @@ print(new_phrase)  # Note: original string remains unchanged
 # Removing characters
 emptied_phrase = phrase.replace("Capibara", "")
 
-## ~~~ String Splitting and Finding ~~~
+# String Splitting and Finding
+# ----------
 
 # Splitting strings
 phrase1 = "niya2323.gmail.com"
@@ -86,5 +94,3 @@ print(first_a)
 name = "llama"
 last_a = name.rfind("a")       # Last occurrence of "a"
 print(last_a)
-
-## 
