@@ -37,3 +37,8 @@ scores = (
 num = 1
 for i in range(len(scores[0])):
     print(scores[0][i], scores[1][i])
+
+# each student and *their mark in the new and efficient way:
+
+for student, score in zip(scores[0], scores[1]):
+    print(student, score)
